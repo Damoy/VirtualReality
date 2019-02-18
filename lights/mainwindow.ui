@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1088</width>
+    <height>533</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>3D Cube Visualisation</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="newCubeGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>10</y>
+      <width>201</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Cube creation</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>30</y>
+       <width>181</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="position_x">
+        <property name="text">
+         <string>position_x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="position_y">
+        <property name="text">
+         <string>position_y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="position_z">
+        <property name="text">
+         <string>position_z</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="rotation_pitch">
+        <property name="text">
+         <string>rotation_pitch</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="rotation_yaw">
+        <property name="text">
+         <string>rotation_yaw</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="rotation_roll">
+        <property name="text">
+         <string>rotation_roll</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Texture Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QTextEdit" name="texture_path">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>5</width>
+          <height>5</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>85</width>
+          <height>20</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 255, 255);
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+        </property>
+        <property name="text">
+         <string>CreateNormalCube</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+        </property>
+        <property name="text">
+         <string>CreateDeAJouer</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+        </property>
+        <property name="text">
+         <string>CreateTexturedCube</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;Calibri&quot;;
+
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
+
+border: 1px solid black;
+
+border-radius: 5px;</string>
+        </property>
+        <property name="text">
+         <string>CreateEnlightenedCube</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="position_x_box"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="position_y_box"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDoubleSpinBox" name="position_z_box"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="rotation_pitch_box"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDoubleSpinBox" name="rotation_yaw_box"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QDoubleSpinBox" name="rotation_roll_box"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>330</y>
+      <width>331</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Light configuration</string>
+    </property>
+    <widget class="QPushButton" name="ambientButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>321</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color : rgb(211, 211, 211);
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Ambient color</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="diffuseButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>321</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Diffuse color</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="specularButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>321</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(255, 255, 0);
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Specular color</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="coeffSpecular">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>301</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+     <property name="value">
+      <number>250</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickInterval">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Calibri&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Specular reflection coefficient</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="lightX">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="lightY">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="lightZ">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>20</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>10</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Animation configuration</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>111</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="Animation">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 255, 127);
+
+border: 1px solid black;
+
+border-radius: 5px;</string>
+        </property>
+        <property name="text">
+         <string>Animation</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 60, 60);
+
+border: 1px solid black;
+
+border-radius: 5px;
+
+font: 10pt &quot;Calibri&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Reset</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDial" name="fov">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fovLabel">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>103</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Field Of View</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="WidgetOpenGL" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>720</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>720</width>
+      <height>480</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetOpenGL</class>
+   <extends>QOpenGLWidget</extends>
+   <header>widgetopengl.h</header>
+   <slots>
+    <slot>startAnimation()</slot>
+    <slot>changeFov(int)</slot>
+    <slot>changeOpacity(int)</slot>
+    <slot>resetAnimation()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createColoredCube()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>945</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>770</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createTexturedCube()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>956</x>
+     <y>285</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>769</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createDeAJouer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>895</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>768</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createEnlightenedCube()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>929</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>resetAnimation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>850</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fov</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>changeFov(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>849</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Animation</sender>
+   <signal>clicked()</signal>
+   <receiver>openGLWidget</receiver>
+   <slot>startAnimation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>837</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>coeffSpecular</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeSpecularReflectionCoefficient()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>869</x>
+     <y>481</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>862</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ambientButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeAmbientLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>820</x>
+     <y>384</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>diffuseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeDiffuseLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>964</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>944</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>specularButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeSpecularLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1048</x>
+     <y>426</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>944</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lightX</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeLightPosition()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>786</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lightY</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeLightPosition()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>880</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>737</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lightZ</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeLightPosition()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>977</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>739</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>createColoredCube()</slot>
+  <slot>createTexturedCube()</slot>
+  <slot>createDeAJouer()</slot>
+  <slot>createEnlightenedCube()</slot>
+  <slot>changeAmbientLight()</slot>
+  <slot>changeDiffuseLight()</slot>
+  <slot>changeSpecularLight()</slot>
+  <slot>changeLightPosition()</slot>
+  <slot>changeSpecularReflectionCoefficient()</slot>
+ </slots>
+</ui>

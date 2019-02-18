@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>882</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>TP8 - Flying in world</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="WidgetOpenGL" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>851</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>720</width>
+      <height>480</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetOpenGL</class>
+   <extends>QOpenGLWidget</extends>
+   <header>widgetopengl.h</header>
+   <slots>
+    <slot>startAnimation()</slot>
+    <slot>changeFov(int)</slot>
+    <slot>changeOpacity(int)</slot>
+    <slot>resetAnimation()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>createColoredCube()</slot>
+  <slot>createTexturedCube()</slot>
+  <slot>createDeAJouer()</slot>
+  <slot>createEnlightenedCube()</slot>
+  <slot>changeAmbientLight()</slot>
+  <slot>changeDiffuseLight()</slot>
+  <slot>changeSpecularLight()</slot>
+  <slot>changeLightPosition()</slot>
+  <slot>changeSpecularReflectionCoefficient()</slot>
+  <slot>createPlane()</slot>
+ </slots>
+</ui>
